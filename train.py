@@ -103,8 +103,8 @@ print(classification_report(train_Y, train_pred, target_names=LABELS))
 print("\nClassification Report (Test):")
 print(classification_report(test_Y, test_pred, target_names=LABELS))
 
-# Save the model
-save_dir = r"model"
+# Save the models
+save_dir = r"models"
 os.makedirs(save_dir, exist_ok=True)
 file_name = os.path.join(save_dir, "Model_MLP_new.pkl")
 with open(file_name, 'wb') as f:
