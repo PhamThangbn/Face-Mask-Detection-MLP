@@ -136,6 +136,18 @@ pip install -r requirements.txt
 
 ---
 
+## 📊 Results
+
+The model achieves an accuracy of **92%** on the test set.
+
+Below is the results of the code for predicting the images:
+
+![image](https://github.com/PhamThangbn/Face-Mask-Detection-MLP/blob/main/images/with_mask.JPG)
+
+![image](https://github.com/PhamThangbn/Face-Mask-Detection-MLP/blob/main/images/without_mask.JPG)
+
+---
+
 ## 📝 Notes
 
 - **Model Path**: Ensure the model file (`models/train_MLP_new.pkl`) exists or update the path in `main.py` if using a custom model.
