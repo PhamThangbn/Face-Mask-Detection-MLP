@@ -1,4 +1,5 @@
 # 😷 Face Mask Detection using MLP
+
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -11,6 +12,7 @@ A Python-based project utilizing a **Multilayer Perceptron (MLP)** neural networ
 Follow these steps to set up and run the project:
 
 ### 1. Clone the Repository
+
 Clone the project to your local machine:
 
 ```bash
@@ -19,6 +21,7 @@ cd Face-Mask-Detection-MLP
 ```
 
 ### 2. Install Required Libraries
+
 Install the necessary Python libraries listed in `requirements.txt`:
 
 ```bash
@@ -26,6 +29,7 @@ pip install -r requirements.txt
 ```
 
 ### 3. Train the Model (Optional)
+
 If you want to train a new MLP model, run the training script:
 
 ```bash
@@ -39,10 +43,12 @@ models/Model_MLP_new.pkl
 ```
 
 ⚠️ **Note**:
+
 - The newly generated `.pkl` file **will not overwrite** the existing model.
 - To use the new model as the default, rename it manually (e.g., to `train_MLP_new.pkl`) and update the model path in `main.py` if needed.
 
 ### 4. Run the Main Application
+
 Launch the face mask detection GUI:
 
 ```bash
@@ -67,8 +73,6 @@ Face-Mask-Detection-MLP/
 │
 ├── output_videos/          # Contains videos after processing with annotations
 │
-├── .gitattributes          # Git LFS configuration file for large files like models
-│
 ├── main.py                 # Main script to launch the face detection GUI
 │
 ├── train.py                # Script to train the MLP model from dataset
@@ -84,14 +88,14 @@ Face-Mask-Detection-MLP/
 
 The project depends on the following Python libraries (listed in `requirements.txt`):
 
-| Library       | Purpose                              |
-|---------------|--------------------------------------|
-| opencv-python | Image and video processing           |
-| numpy         | Numerical computations               |
-| joblib        | Loading the trained MLP model        |
-| Pillow        | Image handling in Tkinter GUI        |
-| mtcnn         | Face detection using MTCNN model     |
-| tensorflow    | Deep learning operations for MTCNN   |
+| Library       | Purpose                            |
+| ------------- | ---------------------------------- |
+| opencv-python | Image and video processing         |
+| numpy         | Numerical computations             |
+| joblib        | Loading the trained MLP model      |
+| Pillow        | Image handling in Tkinter GUI      |
+| mtcnn         | Face detection using MTCNN model   |
+| tensorflow    | Deep learning operations for MTCNN |
 
 Install them using:
 
@@ -116,10 +120,12 @@ pip install -r requirements.txt
 ## ⚙️ How It Works
 
 1. **Face Detection**:
+
    - The **MTCNN** model detects faces in input images or video frames with high accuracy.
    - Detected faces are cropped and processed for classification.
 
 2. **Mask Classification**:
+
    - The cropped face is resized to `128x128`, normalized, and fed into the **MLP** model.
    - The model outputs whether the person is **wearing a mask** or **not**.
 
@@ -135,7 +141,6 @@ pip install -r requirements.txt
 - **Model Path**: Ensure the model file (`models/train_MLP_new.pkl`) exists or update the path in `main.py` if using a custom model.
 - **Performance**: MTCNN may be slower for real-time video/webcam due to its deep learning nature. For better performance, consider using a GPU or resizing input frames.
 - **Dataset**: The `dataset/` folder contains sample images (`with_mask/` and `without_mask/`) for training. Add more data to improve model accuracy.
-- **Git LFS**: Large model files are managed with **Git LFS**. Ensure Git LFS is installed (`git lfs install`) before cloning.
 
 ---
 
