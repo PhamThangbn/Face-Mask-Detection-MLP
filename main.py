@@ -7,15 +7,15 @@ from tkinter import filedialog, messagebox, ttk
 from PIL import Image, ImageTk
 from mtcnn import MTCNN
 
-# Load mask classifier model
-mask_classifier_model_path = "model/Model_MLP.pkl"
+# Load mask classifier models
+mask_classifier_model_path = "models/Model_MLP.pkl"
 mask_classifier_model = joblib.load(mask_classifier_model_path)
 
 # Initialize MTCNN
 detector = MTCNN()
 
 # Check and create output directory if it doesn't exist
-output_dir = "output_videos"
+output_dir = "/output_videos"
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
