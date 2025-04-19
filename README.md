@@ -142,9 +142,7 @@ The model achieves an accuracy of **92%** on the test set.
 
 Below is the results of the code for predicting the images:
 
-![image](https://github.com/PhamThangbn/Face-Mask-Detection-MLP/blob/main/images/with_mask.JPG)
-
-![image](https://github.com/PhamThangbn/Face-Mask-Detection-MLP/blob/main/images/without_mask.JPG)
+<img src="https://raw.githubusercontent.com/PhamThangbn/Face-Mask-Detection-MLP/main/images/with_mask.JPG" width="400"/> &nbsp; <img src="https://raw.githubusercontent.com/PhamThangbn/Face-Mask-Detection-MLP/main/images/without_mask.JPG" width="400"/>
 
 ---
 
